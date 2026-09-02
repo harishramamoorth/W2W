@@ -4,7 +4,11 @@
 /* ── Base ── */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html, body { 
+  scroll-behavior: smooth; 
+  overflow-x: hidden;
+  width: 100%;
+}
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -51,13 +55,43 @@ body {
 .animate-float     { animation: float 3s ease-in-out infinite; }
 .animate-pulse-glow{ animation: pulse-glow 2s ease-in-out infinite; }
 
-.delay-100 { animation-delay: .1s; }
-.delay-200 { animation-delay: .2s; }
-.delay-300 { animation-delay: .3s; }
-.delay-400 { animation-delay: .4s; }
-.delay-500 { animation-delay: .5s; }
-.delay-600 { animation-delay: .6s; }
-.delay-700 { animation-delay: .7s; }
+@keyframes gradientPan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient-pan {
+  background-size: 200% 200%;
+  animation: gradientPan 6s ease infinite;
+}
+
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+.animate-blob {
+  animation: blobFloat 10s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Scroll Reveal Utilities ── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: .1s; animation-delay: .1s; }
+.delay-200 { transition-delay: .2s; animation-delay: .2s; }
+.delay-300 { transition-delay: .3s; animation-delay: .3s; }
+.delay-400 { transition-delay: .4s; animation-delay: .4s; }
+.delay-500 { transition-delay: .5s; animation-delay: .5s; }
+.delay-600 { transition-delay: .6s; animation-delay: .6s; }
+.delay-700 { transition-delay: .7s; animation-delay: .7s; }
 
 /* ── Glass Effect ── */
 .glass {
@@ -106,4 +140,18 @@ body {
 }
 .modal-content {
   animation: scaleIn .3s ease-out;
+}
+
+/* ── Modern Navbar Custom Styles ── */
+.navbar-pill-active {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4);
+  border-radius: 14px;
+}
+
+.navbar-pill-hover:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff !important;
+  transform: translateY(-1px);
 }

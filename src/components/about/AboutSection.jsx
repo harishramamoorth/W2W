@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import bannerImg from '../../assets/banner.png';
-import mapImg from '../../assets/tn_map.jpg';
+import mapImg from '../../assets/realistic_tn_map.jpg';
 import {
   BookIcon,
   TargetIcon,
@@ -47,47 +47,57 @@ export default function AboutSection() {
          ════════════════════════════════════════════════════ */}
       <section style={{
         position: 'relative',
-        background: 'linear-gradient(135deg, #022c22 0%, #064e3b 50%, #022c22 100%)',
-        color: '#fff',
+        background: 'linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #f8fafc 100%)',
+        color: '#021a12',
         padding: '72px 24px 80px',
         textAlign: 'center',
         overflow: 'hidden'
       }}>
-        <div style={{ position: 'absolute', top: -80, left: '20%', width: 400, height: 400, borderRadius: '50%', background: 'rgba(250,204,21,0.08)', filter: 'blur(80px)' }} />
-        <div style={{ position: 'absolute', bottom: -80, right: '20%', width: 400, height: 400, borderRadius: '50%', background: 'rgba(52,211,153,0.1)', filter: 'blur(80px)' }} />
+        <div style={{ position: 'absolute', top: -80, left: '20%', width: 400, height: 400, borderRadius: '50%', background: 'rgba(16, 185, 129, 0.05)', filter: 'blur(80px)' }} />
+        <div style={{ position: 'absolute', bottom: -80, right: '20%', width: 400, height: 400, borderRadius: '50%', background: 'rgba(250, 204, 21, 0.05)', filter: 'blur(80px)' }} />
 
         <div style={{ position: 'relative', zIndex: 10, maxWidth: 960, margin: '0 auto' }}>
           <span style={{
             display: 'inline-block',
-            background: 'rgba(255,255,255,0.08)',
-            backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(255,255,255,0.18)',
-            color: '#facc15',
+            background: '#ecfdf5',
+            border: '1px solid #a7f3d0',
+            color: '#047857',
             fontSize: 12,
             fontWeight: 800,
             textTransform: 'uppercase',
             letterSpacing: '0.25em',
             padding: '8px 20px',
             borderRadius: 999,
-            marginBottom: 20
+            marginBottom: 24,
+            boxShadow: '0 4px 12px rgba(16,185,129,0.05)'
           }}>
             Waste to Wealth Enterprise
           </span>
 
-          <h1 style={{
+          <h1 className="animate-fade-up delay-200" style={{
             fontSize: 'clamp(36px, 6vw, 64px)',
             fontWeight: 900,
-            color: '#fff',
+            color: '#021a12',
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
             margin: '0 0 16px'
           }}>
-            About <span style={{ background: 'linear-gradient(135deg, #facc15, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>W2W Ventures</span>
+            About{' '}
+            <span className="animate-float" style={{ 
+              background: 'linear-gradient(135deg, #10b981 0%, #047857 100%)', 
+              WebkitBackgroundClip: 'text', 
+              backgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              color: 'transparent',
+              display: 'inline-block'
+            }}>
+              W2W Ventures
+            </span>
           </h1>
 
-          <p style={{
+          <p className="animate-fade-up delay-300" style={{
             fontSize: 'clamp(16px, 2.5vw, 22px)',
-            color: 'rgba(209,250,229,0.92)',
+            color: '#4b5563',
             maxWidth: 680,
             margin: '0 auto 40px',
             lineHeight: 1.6,
@@ -96,15 +106,19 @@ export default function AboutSection() {
             Building a cleaner tomorrow, one waste stream at a time
           </p>
 
-          {/* Landscape Banner Image */}
-          <div style={{
+          {/* Landscape Banner Image with Float Animation */}
+          <div className="animate-fade-up delay-400" style={{
             maxWidth: 1040,
             margin: '0 auto',
             borderRadius: 24,
             overflow: 'hidden',
-            boxShadow: '0 25px 50px -12px rgba(0,0,0,0.45)',
-            border: '2px solid rgba(255,255,255,0.15)'
-          }}>
+            boxShadow: '0 25px 50px -12px rgba(0,0,0,0.15)',
+            border: '1px solid rgba(16, 185, 129, 0.2)',
+            transition: 'transform 0.5s ease',
+          }}
+          onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-8px)'}
+          onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+          >
             <img
               src={bannerImg}
               alt="W2W Ventures Landscape Banner"
@@ -259,21 +273,21 @@ export default function AboutSection() {
             4. WHY WASTE-TO-WEALTH MATTERS (3 Points)
            ════════════════════════════════════════════════════ */}
         <section style={{
-          background: 'linear-gradient(135deg, #022c22 0%, #064e3b 100%)',
+          background: 'linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%)',
           borderRadius: 32,
           padding: 'clamp(40px, 5vw, 64px) clamp(24px, 4vw, 48px)',
-          color: '#fff',
-          boxShadow: '0 20px 48px rgba(2,44,34,0.3)',
+          color: '#021a12',
+          border: '1px solid #e2e8f0',
+          boxShadow: '0 10px 40px rgba(0,0,0,0.03)',
           position: 'relative',
           overflow: 'hidden'
         }}>
           <div style={{ textAlign: 'center', marginBottom: 48, position: 'relative', zIndex: 10 }}>
             <span style={{
               display: 'inline-block',
-              background: 'rgba(255,255,255,0.08)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(255,255,255,0.15)',
-              color: '#facc15',
+              background: '#ecfdf5',
+              border: '1px solid #a7f3d0',
+              color: '#047857',
               fontSize: 11,
               fontWeight: 800,
               textTransform: 'uppercase',
@@ -284,72 +298,72 @@ export default function AboutSection() {
             }}>
               Environmental &amp; Economic Impact
             </span>
-            <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 900, color: '#fff', margin: '0 0 8px' }}>
+            <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 900, color: '#021a12', margin: '0 0 8px' }}>
               Why It Matters
             </h2>
-            <div style={{ width: 60, height: 3, background: 'linear-gradient(90deg, #facc15, #34d399)', borderRadius: 999, margin: '0 auto' }} />
+            <div style={{ width: 60, height: 4, background: 'linear-gradient(90deg, #059669, #10b981)', borderRadius: 999, margin: '0 auto' }} />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24, position: 'relative', zIndex: 10 }}>
             {/* Point 1 */}
-            <div style={{
-              background: 'rgba(255,255,255,0.06)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(255,255,255,0.1)',
+            <div className="card-lift" style={{
+              background: '#ffffff',
+              border: '1px solid rgba(16, 185, 129, 0.15)',
               borderRadius: 24,
               padding: '32px 24px',
               textAlign: 'center',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
               transition: 'all 0.3s ease'
             }}>
-              <div style={{ color: '#facc15', display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
-                <TrashIcon size={36} />
+              <div style={{ color: '#059669', background: '#ecfdf5', width: 64, height: 64, borderRadius: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
+                <TrashIcon size={32} />
               </div>
-              <h4 style={{ fontSize: 20, fontWeight: 800, color: '#facc15', margin: '0 0 10px' }}>
+              <h4 style={{ fontSize: 20, fontWeight: 800, color: '#021a12', margin: '0 0 10px' }}>
                 Reduces Landfill Waste
               </h4>
-              <p style={{ fontSize: 14, color: '#d1fae5', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: 14, color: '#4b5563', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
                 Diverts tons of industrial and agricultural waste from reaching landfills daily.
               </p>
             </div>
 
             {/* Point 2 */}
-            <div style={{
-              background: 'rgba(255,255,255,0.06)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(255,255,255,0.1)',
+            <div className="card-lift" style={{
+              background: '#ffffff',
+              border: '1px solid rgba(16, 185, 129, 0.15)',
               borderRadius: 24,
               padding: '32px 24px',
               textAlign: 'center',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
               transition: 'all 0.3s ease'
             }}>
-              <div style={{ color: '#facc15', display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
-                <RecycleIcon size={36} />
+              <div style={{ color: '#059669', background: '#ecfdf5', width: 64, height: 64, borderRadius: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
+                <RecycleIcon size={32} />
               </div>
-              <h4 style={{ fontSize: 20, fontWeight: 800, color: '#facc15', margin: '0 0 10px' }}>
+              <h4 style={{ fontSize: 20, fontWeight: 800, color: '#021a12', margin: '0 0 10px' }}>
                 Creates Sustainable Products
               </h4>
-              <p style={{ fontSize: 14, color: '#d1fae5', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: 14, color: '#4b5563', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
                 Transforms raw discarded waste into high-value, eco-friendly reusable items.
               </p>
             </div>
 
             {/* Point 3 */}
-            <div style={{
-              background: 'rgba(255,255,255,0.06)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(255,255,255,0.1)',
+            <div className="card-lift" style={{
+              background: '#ffffff',
+              border: '1px solid rgba(16, 185, 129, 0.15)',
               borderRadius: 24,
               padding: '32px 24px',
               textAlign: 'center',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
               transition: 'all 0.3s ease'
             }}>
-              <div style={{ color: '#facc15', display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
-                <HandshakeIcon size={36} />
+              <div style={{ color: '#059669', background: '#ecfdf5', width: 64, height: 64, borderRadius: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
+                <HandshakeIcon size={32} />
               </div>
-              <h4 style={{ fontSize: 20, fontWeight: 800, color: '#facc15', margin: '0 0 10px' }}>
+              <h4 style={{ fontSize: 20, fontWeight: 800, color: '#021a12', margin: '0 0 10px' }}>
                 Supports Local Communities
               </h4>
-              <p style={{ fontSize: 14, color: '#d1fae5', lineHeight: 1.6, margin: 0 }}>
+              <p style={{ fontSize: 14, color: '#4b5563', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
                 Generates regional economic growth and empowers industries across Tamil Nadu.
               </p>
             </div>
@@ -396,19 +410,31 @@ export default function AboutSection() {
             
             {/* Location Cards */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {locationsList.map((loc) => (
+              {locationsList.map((loc, index) => (
                 <div
                   key={loc.name}
+                  className={`animate-fade-up delay-${(index + 1) * 100}`}
                   style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: 20,
                     padding: '20px 24px',
                     borderRadius: 20,
-                    background: '#f8fafc',
-                    border: '1px solid #e2e8f0',
-                    boxShadow: '0 2px 8px rgba(0,0,0,0.02)',
-                    transition: 'all 0.3s ease'
+                    background: '#ffffff',
+                    border: '1px solid rgba(16, 185, 129, 0.2)',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    cursor: 'default'
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-6px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = '0 16px 32px rgba(16, 185, 129, 0.15)';
+                    e.currentTarget.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.02)';
+                    e.currentTarget.style.borderColor = 'rgba(16, 185, 129, 0.2)';
                   }}
                 >
                   <div style={{
@@ -420,7 +446,8 @@ export default function AboutSection() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     border: '1px solid #a7f3d0',
-                    flexShrink: 0
+                    flexShrink: 0,
+                    transition: 'transform 0.3s ease'
                   }}>
                     {loc.icon}
                   </div>
@@ -437,13 +464,17 @@ export default function AboutSection() {
             </div>
 
             {/* Tamil Nadu Map Graphic */}
-            <div style={{
+            <div className="animate-fade-up delay-400" style={{
               borderRadius: 24,
               overflow: 'hidden',
-              border: '2px solid #a7f3d0',
-              boxShadow: '0 12px 32px rgba(6,95,70,0.1)',
-              background: '#ecfdf5'
-            }}>
+              border: '2px solid rgba(16, 185, 129, 0.3)',
+              boxShadow: '0 20px 50px rgba(0, 0, 0, 0.1)',
+              background: '#ecfdf5',
+              transition: 'transform 0.5s ease',
+            }}
+            onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.03) translateY(-10px)'}
+            onMouseLeave={e => e.currentTarget.style.transform = 'scale(1) translateY(0)'}
+            >
               <img
                 src={mapImg}
                 alt="Tamil Nadu Locations Map — W2W Ventures"
@@ -463,41 +494,44 @@ export default function AboutSection() {
             6. CTA
            ════════════════════════════════════════════════════ */}
         <section style={{
-          background: 'linear-gradient(135deg, #064e3b 0%, #022c22 100%)',
+          background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
           borderRadius: 32,
           padding: 'clamp(48px, 6vw, 80px) 24px',
           textAlign: 'center',
           color: '#fff',
-          boxShadow: '0 24px 64px rgba(0,0,0,0.15)',
+          boxShadow: '0 24px 64px rgba(16, 185, 129, 0.25)',
           position: 'relative',
           overflow: 'hidden'
         }}>
           <div style={{ position: 'relative', zIndex: 10, maxWidth: 640, margin: '0 auto' }}>
-            <h2 style={{ fontSize: 'clamp(28px, 4.5vw, 44px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2 }}>
+            <h2 className="animate-fade-up delay-100" style={{ fontSize: 'clamp(28px, 4.5vw, 44px)', fontWeight: 900, margin: '0 0 16px', lineHeight: 1.2, textShadow: '0 4px 20px rgba(0,0,0,0.1)' }}>
               Want to know more?
             </h2>
-            <p style={{ color: 'rgba(209,250,229,0.85)', fontSize: 'clamp(15px, 2vw, 19px)', margin: '0 auto 36px', lineHeight: 1.6, fontWeight: 400 }}>
+            <p className="animate-fade-up delay-200" style={{ color: 'rgba(255,255,255,0.9)', fontSize: 'clamp(15px, 2vw, 19px)', margin: '0 auto 36px', lineHeight: 1.6, fontWeight: 500 }}>
               Discover how our innovative waste management processes convert waste streams into sustainable wealth.
             </p>
-            <Link
-              to="/solutions"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 10,
-                background: '#facc15',
-                color: '#022c22',
-                fontWeight: 800,
-                padding: '18px 44px',
-                borderRadius: 999,
-                fontSize: 18,
-                textDecoration: 'none',
-                boxShadow: '0 8px 32px rgba(250,204,21,0.3)',
-                transition: 'all 0.3s ease'
-              }}
-            >
-              Explore Our Solutions →
-            </Link>
+            <div className="animate-fade-up delay-300">
+              <Link
+                to="/solutions"
+                className="card-lift animate-pulse-glow"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  background: '#facc15',
+                  color: '#021a12',
+                  fontWeight: 800,
+                  padding: '18px 44px',
+                  borderRadius: 999,
+                  fontSize: 18,
+                  textDecoration: 'none',
+                  boxShadow: '0 8px 32px rgba(250,204,21,0.3)',
+                  position: 'relative'
+                }}
+              >
+                Explore Our Solutions →
+              </Link>
+            </div>
           </div>
         </section>
 

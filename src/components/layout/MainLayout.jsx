@@ -16,7 +16,7 @@ export default function MainLayout() {
   }, [pathname, hash]);
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#f8faf8', color: '#111827', fontFamily: "'Inter', sans-serif" }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: '#f8faf8', color: '#111827', fontFamily: "'Inter', sans-serif", overflowX: 'hidden', width: '100%' }}>
       <Header />
       <main style={{ flexGrow: 1, paddingTop: 80 }}>
         <Outlet />

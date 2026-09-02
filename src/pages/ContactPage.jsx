@@ -31,51 +31,61 @@ export default function ContactPage() {
          ════════════════════════════════════════════════════ */}
       <section style={{
         position: 'relative',
-        background: 'linear-gradient(135deg, #022c22 0%, #064e3b 50%, #022c22 100%)',
-        color: '#fff',
+        background: 'linear-gradient(135deg, #e8f7f0 0%, #f4fdf9 50%, #ffffff 100%)',
+        color: '#021a12',
         padding: '72px 24px 80px',
         textAlign: 'center',
         overflow: 'hidden'
       }}>
-        <div style={{ position: 'absolute', top: -60, left: '20%', width: 400, height: 400, borderRadius: '50%', background: 'rgba(250,204,21,0.08)', filter: 'blur(80px)' }} />
-        <div style={{ position: 'absolute', bottom: -60, right: '20%', width: 400, height: 400, borderRadius: '50%', background: 'rgba(52,211,153,0.1)', filter: 'blur(80px)' }} />
+        <div style={{ position: 'absolute', top: -60, left: '20%', width: 400, height: 400, borderRadius: '50%', background: 'rgba(16, 185, 129, 0.05)', filter: 'blur(80px)' }} />
+        <div style={{ position: 'absolute', bottom: -60, right: '20%', width: 400, height: 400, borderRadius: '50%', background: 'rgba(250, 204, 21, 0.05)', filter: 'blur(80px)' }} />
 
         <div style={{ position: 'relative', zIndex: 10, maxWidth: 840, margin: '0 auto' }}>
-          <span style={{
+          <span className="animate-fade-up delay-100" style={{
             display: 'inline-block',
-            background: 'rgba(255,255,255,0.08)',
-            backdropFilter: 'blur(12px)',
-            border: '1px solid rgba(255,255,255,0.18)',
-            color: '#facc15',
+            background: '#ecfdf5',
+            border: '1px solid #a7f3d0',
+            color: '#047857',
             fontSize: 12,
             fontWeight: 800,
             textTransform: 'uppercase',
             letterSpacing: '0.25em',
             padding: '8px 20px',
             borderRadius: 999,
-            marginBottom: 20
+            marginBottom: 24,
+            boxShadow: '0 4px 12px rgba(16,185,129,0.05)'
           }}>
             Partner &amp; Industrial Desk
           </span>
 
-          <h1 style={{
+          <h1 className="animate-fade-up delay-200" style={{
             fontSize: 'clamp(36px, 6vw, 60px)',
             fontWeight: 900,
-            color: '#fff',
+            color: '#021a12',
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
             margin: '0 0 16px'
           }}>
-            Get in Touch with <span style={{ background: 'linear-gradient(135deg, #facc15, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>W2W Ventures</span>
+            Get in Touch with{' '}
+            <span style={{ 
+              background: 'linear-gradient(135deg, #10b981 0%, #047857 100%)', 
+              WebkitBackgroundClip: 'text', 
+              backgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              color: 'transparent',
+              display: 'inline-block'
+            }}>
+              W2W Ventures
+            </span>
           </h1>
 
-          <p style={{
+          <p className="animate-fade-up delay-300" style={{
             fontSize: 'clamp(16px, 2.5vw, 21px)',
-            color: 'rgba(209,250,229,0.9)',
+            color: '#4b5563',
             maxWidth: 680,
             margin: '0 auto',
             lineHeight: 1.6,
-            fontWeight: 400
+            fontWeight: 500
           }}>
             Have waste management inquiries, bulk supply requests, or partnership proposals? Connect directly with our team.
           </p>
@@ -93,12 +103,12 @@ export default function ContactPage() {
           {/* ════════════════════════════════════════════════════
               COLUMN 1 — INTERACTIVE CONTACT FORM
              ════════════════════════════════════════════════════ */}
-          <div style={{
-            background: '#fff',
+          <div className="animate-fade-up delay-400" style={{
+            background: '#ffffff',
             borderRadius: 32,
             padding: 'clamp(32px, 4vw, 48px)',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 12px 36px rgba(0,0,0,0.04)'
+            border: '1px solid rgba(16, 185, 129, 0.15)',
+            boxShadow: '0 24px 48px rgba(0,0,0,0.06)'
           }}>
             <h2 style={{ fontSize: 26, fontWeight: 900, color: '#022c22', margin: '0 0 8px' }}>
               Send Us a Message
@@ -334,8 +344,9 @@ export default function ContactPage() {
                 {/* Submit Button */}
                 <button
                   type="submit"
+                  className="card-lift animate-pulse-glow"
                   style={{
-                    background: '#064e3b',
+                    background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
                     color: '#fff',
                     fontWeight: 800,
                     fontSize: 16,
@@ -343,17 +354,8 @@ export default function ContactPage() {
                     borderRadius: 999,
                     border: 'none',
                     cursor: 'pointer',
-                    boxShadow: '0 8px 24px rgba(6,78,59,0.25)',
-                    transition: 'all 0.25s ease',
+                    boxShadow: '0 8px 24px rgba(16, 185, 129, 0.25)',
                     marginTop: 8
-                  }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = '#022c22';
-                    e.currentTarget.style.transform = 'scale(1.02)';
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = '#064e3b';
-                    e.currentTarget.style.transform = 'scale(1)';
                   }}
                 >
                   Submit Inquiry →
@@ -370,57 +372,57 @@ export default function ContactPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
             
             {/* Headquarters Card */}
-            <div style={{
-              background: '#022c22',
-              color: '#fff',
+            <div className="card-lift animate-fade-up delay-500" style={{
+              background: '#ffffff',
+              border: '1px solid rgba(16, 185, 129, 0.25)',
               borderRadius: 28,
               padding: 36,
-              boxShadow: '0 12px 36px rgba(2,44,34,0.3)',
+              boxShadow: '0 24px 48px rgba(16, 185, 129, 0.08)',
               position: 'relative',
               overflow: 'hidden'
             }}>
-              <div style={{ position: 'absolute', top: -40, right: -40, width: 160, height: 160, borderRadius: '50%', background: 'rgba(250,204,21,0.08)', filter: 'blur(30px)' }} />
+              <div style={{ position: 'absolute', top: -40, right: -40, width: 160, height: 160, borderRadius: '50%', background: 'rgba(16, 185, 129, 0.05)', filter: 'blur(30px)' }} />
 
               <div style={{ position: 'relative', zIndex: 10 }}>
-                <span style={{ fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.15em', color: '#facc15', display: 'block', marginBottom: 12 }}>
+                <span style={{ fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.15em', color: '#059669', display: 'block', marginBottom: 12 }}>
                   Headquarters &amp; Executive Desk
                 </span>
-                <h3 style={{ fontSize: 24, fontWeight: 900, color: '#fff', margin: '0 0 16px' }}>
+                <h3 style={{ fontSize: 24, fontWeight: 900, color: '#021a12', margin: '0 0 16px' }}>
                   W2W Ventures India
                 </h3>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                   <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
-                    <span style={{ color: '#facc15', marginTop: 2 }}>
-                      <MapPinIcon size={20} color="#facc15" />
+                    <span style={{ color: '#10b981', marginTop: 2 }}>
+                      <MapPinIcon size={20} color="#10b981" />
                     </span>
                     <div>
-                      <h5 style={{ fontSize: 14, fontWeight: 700, color: '#fff', margin: '0 0 2px' }}>Registered Office</h5>
-                      <p style={{ fontSize: 14, color: '#a7f3d0', margin: 0, lineHeight: 1.5 }}>
+                      <h5 style={{ fontSize: 14, fontWeight: 700, color: '#021a12', margin: '0 0 2px' }}>Registered Office</h5>
+                      <p style={{ fontSize: 14, color: '#4b5563', margin: 0, lineHeight: 1.5, fontWeight: 500 }}>
                         Tamil Nadu, India (Chennai · Vaniyambadi · Virudhunagar · Tirupur)
                       </p>
                     </div>
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                    <span style={{ color: '#facc15' }}>
-                      <PhoneIcon size={20} color="#facc15" />
+                    <span style={{ color: '#10b981' }}>
+                      <PhoneIcon size={20} color="#10b981" />
                     </span>
                     <div>
-                      <h5 style={{ fontSize: 14, fontWeight: 700, color: '#fff', margin: '0 0 2px' }}>Phone Support</h5>
-                      <a href="tel:+919876543210" style={{ fontSize: 14, color: '#a7f3d0', textDecoration: 'none', fontWeight: 600 }}>
+                      <h5 style={{ fontSize: 14, fontWeight: 700, color: '#021a12', margin: '0 0 2px' }}>Phone Support</h5>
+                      <a href="tel:+919876543210" style={{ fontSize: 14, color: '#059669', textDecoration: 'none', fontWeight: 600 }}>
                         +91 98765 43210 / +91 98765 43211
                       </a>
                     </div>
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                    <span style={{ color: '#facc15' }}>
-                      <MailIcon size={20} color="#facc15" />
+                    <span style={{ color: '#10b981' }}>
+                      <MailIcon size={20} color="#10b981" />
                     </span>
                     <div>
-                      <h5 style={{ fontSize: 14, fontWeight: 700, color: '#fff', margin: '0 0 2px' }}>Email Contact</h5>
-                      <a href="mailto:info@w2wventures.com" style={{ fontSize: 14, color: '#a7f3d0', textDecoration: 'none', fontWeight: 600 }}>
+                      <h5 style={{ fontSize: 14, fontWeight: 700, color: '#021a12', margin: '0 0 2px' }}>Email Contact</h5>
+                      <a href="mailto:info@w2wventures.com" style={{ fontSize: 14, color: '#059669', textDecoration: 'none', fontWeight: 600 }}>
                         info@w2wventures.com
                       </a>
                     </div>
@@ -430,15 +432,15 @@ export default function ContactPage() {
             </div>
 
             {/* Regional Processing Hubs Card */}
-            <div style={{
-              background: '#fff',
+            <div className="card-lift animate-fade-up delay-600" style={{
+              background: '#ffffff',
               borderRadius: 28,
               padding: 36,
-              border: '1px solid #e2e8f0',
-              boxShadow: '0 8px 24px rgba(0,0,0,0.03)'
+              border: '1px solid rgba(16, 185, 129, 0.15)',
+              boxShadow: '0 24px 48px rgba(0,0,0,0.06)'
             }}>
-              <h4 style={{ fontSize: 18, fontWeight: 800, color: '#022c22', margin: '0 0 16px', display: 'flex', alignItems: 'center', gap: 10 }}>
-                <span style={{ color: '#047857' }}><BuildingIcon size={22} color="#047857" /></span>
+              <h4 style={{ fontSize: 18, fontWeight: 800, color: '#021a12', margin: '0 0 16px', display: 'flex', alignItems: 'center', gap: 10 }}>
+                <span style={{ color: '#059669' }}><BuildingIcon size={22} color="#059669" /></span>
                 <span>Regional Processing Hubs</span>
               </h4>
 
@@ -449,11 +451,14 @@ export default function ContactPage() {
                   { city: 'Virudhunagar', desk: 'Corrugated Packaging Repurposing Facility' },
                   { city: 'Tirupur', desk: 'Garment Cotton Fiber Spinning Unit' },
                 ].map((hub) => (
-                  <div key={hub.city} style={{ padding: '12px 16px', borderRadius: 16, background: '#f8fafc', border: '1px solid #e2e8f0' }}>
-                    <h5 style={{ fontSize: 15, fontWeight: 800, color: '#022c22', margin: '0 0 2px' }}>
-                      📍 {hub.city} Hub
+                  <div key={hub.city} style={{ padding: '12px 16px', borderRadius: 16, background: '#f8fafc', border: '1px solid #e2e8f0', transition: 'all 0.2s', cursor: 'default' }}
+                    onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(16, 185, 129, 0.3)'}
+                    onMouseLeave={e => e.currentTarget.style.borderColor = '#e2e8f0'}
+                  >
+                    <h5 style={{ fontSize: 15, fontWeight: 800, color: '#021a12', margin: '0 0 2px' }}>
+                      <span style={{ color: '#10b981', marginRight: 4 }}>📍</span> {hub.city} Hub
                     </h5>
-                    <p style={{ fontSize: 13, color: '#6b7280', margin: 0, fontWeight: 500 }}>
+                    <p style={{ fontSize: 13, color: '#4b5563', margin: 0, fontWeight: 500 }}>
                       {hub.desk}
                     </p>
                   </div>
