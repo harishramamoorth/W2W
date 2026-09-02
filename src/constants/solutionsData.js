@@ -1,8 +1,9 @@
-import vermiGoldImg from '../assets/vermi_gold.jpg';
+import vermiGoldImg from '../assets/vermi.png';
 import wastePaperImg from '../assets/waste_paper.jpg';
 import leatherWasteImg from '../assets/leather_waste.jpg';
 import cartonBoxImg from '../assets/carton_box.jpg';
 import recycleCottonImg from '../assets/recycle_cotton.jpg';
+import compostImg from '../assets/image.png';
 
 export const solutionsData = [
   {
@@ -36,8 +37,38 @@ export const solutionsData = [
     ]
   },
   {
+    id: 'organic-compost',
+    name: 'Organic Compost',
+    solutionName: 'Organic Compost',
+    image: compostImg,
+    badgeColor: '#15803d',
+    badgeBg: '#f0fdf4',
+    problem: 'Agricultural residues and green waste are often burnt or discarded, losing valuable soil nutrients and polluting the air.',
+    process: 'Green waste and crop residues are methodically decomposed using advanced aerobic composting techniques to create nutrient-dense organic fertilizer.',
+    location: 'Tamil Nadu Agri-Hubs',
+    output: 'Premium Eco-Friendly Organic Compost',
+    description: 'High-quality organic compost produced from agricultural and green waste.',
+    details: 'Our Organic Compost transforms agricultural waste into a premium soil amendment that enriches soil structure, promotes beneficial microbes, and enhances crop yield sustainably.',
+    workflow: [
+      { step: '01', title: 'Green Waste Sourcing', desc: 'Collecting agricultural residues, leaves, and organic matter from local farms.' },
+      { step: '02', title: 'Aerobic Decomposition', desc: 'Controlled turning and moisture management to optimize the composting process.' },
+      { step: '03', title: 'Curing & Screening', desc: 'Maturing the compost and screening it for a fine, uniform texture.' }
+    ],
+    useCases: [
+      'Sustainable Farming & Agriculture',
+      'Urban Gardening & Landscaping',
+      'Soil Remediation & Restoration',
+      'Nursery & Greenhouse Plant Cultivation'
+    ],
+    envImpact: [
+      '🌱 Restores Essential Nutrients to Depleted Soils',
+      '🚫 Prevents Open Burning of Agricultural Waste',
+      '💧 Improves Soil Water Retention Capacity'
+    ]
+  },
+  {
     id: 'delta-export-paper',
-    name: 'Delta Export — Waste Paper',
+    name: 'Delta Export — Recycle Paper',
     solutionName: 'Delta Export',
     image: wastePaperImg,
     badgeColor: '#1d4ed8',
@@ -67,8 +98,8 @@ export const solutionsData = [
   },
   {
     id: 'leather-waste',
-    name: 'Leather Waste Recycling',
-    solutionName: 'Leather Waste Recycling',
+    name: 'Recycle Leather',
+    solutionName: 'Recycle Leather',
     image: leatherWasteImg,
     badgeColor: '#ca8a04',
     badgeBg: '#fefce8',

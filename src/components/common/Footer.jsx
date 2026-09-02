@@ -11,6 +11,7 @@ const quickLinks = [
 
 const solutions = [
   { label: 'Vermi Gold', path: '/solutions/vermi-gold' },
+  { label: 'Organic Compost', path: '/solutions/organic-compost' },
   { label: 'Waste Paper', path: '/solutions/delta-export-paper' },
   { label: 'Leather Waste', path: '/solutions/leather-waste' },
   { label: 'Carton Box', path: '/solutions/carton-box' },

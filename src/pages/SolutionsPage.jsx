@@ -68,7 +68,7 @@ export default function SolutionsPage() {
             letterSpacing: '-0.02em',
             margin: '0 0 16px'
           }}>
-            Our <span style={{ background: 'linear-gradient(135deg, #facc15, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Solutions</span>
+            Our <span style={{ background: 'linear-gradient(135deg, #facc15, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Products</span>
           </h1>
 
           <p style={{
@@ -108,7 +108,7 @@ export default function SolutionsPage() {
               transition: 'all 0.25s ease'
             }}
           >
-            All Solutions
+            All Products
           </button>
           {solutionsData.map((item) => {
             const isActive = activeFilter === item.id;
@@ -407,7 +407,7 @@ export default function SolutionsPage() {
                   borderRadius: 999,
                   marginBottom: 8
                 }}>
-                  W2W Solution Blueprint
+                  W2W Product Blueprint
                 </span>
                 <h3 style={{ fontSize: 28, fontWeight: 900, color: '#fff', margin: 0, textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}>
                   {selectedSolution.name}

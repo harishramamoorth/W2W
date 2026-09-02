@@ -26,6 +26,14 @@ const solutionLinks = [
     tag: 'Popular'
   },
   { 
+    id: 'organic-compost',
+    label: 'Organic Compost', 
+    path: '/solutions/organic-compost', 
+    desc: 'Premium organic compost from agricultural and green waste',
+    icon: LeafIcon,
+    tag: 'Eco Product'
+  },
+  { 
     id: 'delta-export-paper',
     label: 'Paper Recycle', 
     path: '/solutions/delta-export-paper', 
@@ -35,7 +43,7 @@ const solutionLinks = [
   },
   { 
     id: 'leather-waste',
-    label: 'Leather Waste', 
+    label: 'Recycle Leather', 
     path: '/solutions/leather-waste', 
     desc: 'Upcycled leather products & sustainable granules',
     icon: RecycleIcon,
@@ -63,7 +71,7 @@ const solutionLinks = [
 const navItems = [
   { id: 'home', label: 'Home', path: '/', icon: HomeIcon, exact: true },
   { id: 'about', label: 'Network', subLabel: 'About Us', path: '/about', icon: NetworkIcon },
-  { id: 'solutions', label: 'Post', subLabel: 'Our Solutions', path: '/solutions', icon: PlusCircleIcon, hasDropdown: true },
+  { id: 'solutions', label: 'Post', subLabel: 'Our Products', path: '/solutions', icon: PlusCircleIcon, hasDropdown: true },
   { id: 'partners', label: 'Notification', subLabel: 'Meet Partners', path: '/partners', icon: HandshakeIcon },
   { id: 'contact', label: 'Job', subLabel: 'Contact', path: '/contact', icon: MailIcon },
 ];
@@ -331,7 +339,7 @@ export default function Header() {
                             e.currentTarget.style.boxShadow = '0 4px 12px rgba(16, 185, 129, 0.1)';
                           }}
                         >
-                          <span>Explore All Solutions</span>
+                          <span>Explore All Products</span>
                           <span style={{ fontSize: 14 }}>→</span>
                         </Link>
                         </div>
@@ -556,7 +564,7 @@ export default function Header() {
             })}
 
             <div style={{ fontSize: 12, fontWeight: 800, textTransform: 'uppercase', color: '#facc15', letterSpacing: 0.8, marginTop: 8 }}>
-              Solutions Quick Links
+              Products Quick Links
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
               {solutionLinks.map(sol => (

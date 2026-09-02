@@ -29,8 +29,8 @@ export default function HomePageContent() {
   }, []);
 
   const locations = [
-    { name: 'Chennai',      icon: '🏙️', tag: 'Paper Recycling HQ' },
-    { name: 'Vaniyambadi',  icon: '🏭', tag: 'Leather Processing' },
+    { name: 'Chennai & Thanjavur', icon: '🏙️', tag: 'Paper Recycling HQ' },
+    { name: 'Vaniyambadi & Kumbakonam', icon: '🏭', tag: 'Leather Processing' },
     { name: 'Virudhunagar', icon: '📦', tag: 'Carton Repurposing' },
     { name: 'Tirupur',      icon: '🧵', tag: 'Cotton Recycling' },
   ];
@@ -119,7 +119,7 @@ export default function HomePageContent() {
                 }}
               >
                 <div className="btn-shimmer" style={{ position: 'absolute', inset: 0, zIndex: 1 }}></div>
-                <span style={{ position: 'relative', zIndex: 2 }}>Explore Our Solutions</span>
+                <span style={{ position: 'relative', zIndex: 2 }}>Explore Our Products</span>
                 <span style={{ position: 'relative', zIndex: 2 }}>→</span>
               </Link>
               
@@ -181,7 +181,7 @@ export default function HomePageContent() {
               What We Do
             </span>
             <h2 style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 900, color: '#021a12', margin: '8px 0 0', lineHeight: 1.15, letterSpacing: '-0.02em' }}>
-              Our Solutions
+              Our Products
             </h2>
             <div className="section-divider" style={{ margin: '24px auto 20px' }} />
             <p style={{ color: '#4b5563', fontSize: 'clamp(16px, 2vw, 20px)', maxWidth: 540, margin: '0 auto', lineHeight: 1.6 }}>
@@ -189,8 +189,8 @@ export default function HomePageContent() {
             </p>
           </div>
 
-          {/* 5 Cards with staggered fade up */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 28 }}>
+          {/* 6 Cards with staggered fade up */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 28 }}>
             {solutionsList.map((item, index) => (
               <button
                 key={item.id}
@@ -249,7 +249,7 @@ export default function HomePageContent() {
             onMouseLeave={e => { e.currentTarget.querySelector('span.arrow').style.transform = 'translateX(0)'; }}
             >
               <div className="btn-shimmer" style={{ position: 'absolute', inset: 0, zIndex: 1, opacity: 0.5 }}></div>
-              <span style={{ position: 'relative', zIndex: 2 }}>View All Solutions</span>
+              <span style={{ position: 'relative', zIndex: 2 }}>View All Products</span>
               <span className="arrow" style={{ position: 'relative', zIndex: 2, transition: 'transform 0.3s ease' }}>→</span>
             </Link>
           </div>
@@ -405,7 +405,7 @@ export default function HomePageContent() {
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: 20, marginTop: 20, borderTop: '1px solid #f3f4f6' }}>
                 <Link to="/solutions" onClick={() => setPopup(null)} style={{ color: '#047857', fontWeight: 700, fontSize: 14, textDecoration: 'none' }}>
-                  View All Solutions →
+                  View All Products →
                 </Link>
                 <button onClick={() => setPopup(null)} style={{
                   background: '#064e3b', color: '#fff', padding: '10px 24px', borderRadius: 999,

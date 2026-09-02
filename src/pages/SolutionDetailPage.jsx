@@ -37,7 +37,7 @@ export default function SolutionDetailPage() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: '#a7f3d0', marginBottom: 24, flexWrap: 'wrap' }}>
             <Link to="/" style={{ color: '#a7f3d0', textDecoration: 'none', fontWeight: 500 }}>Home</Link>
             <span>/</span>
-            <Link to="/solutions" style={{ color: '#a7f3d0', textDecoration: 'none', fontWeight: 500 }}>Our Solutions</Link>
+            <Link to="/solutions" style={{ color: '#a7f3d0', textDecoration: 'none', fontWeight: 500 }}>Our Products</Link>
             <span>/</span>
             <span style={{ color: '#facc15', fontWeight: 700 }}>{solution.name}</span>
           </div>
@@ -57,7 +57,7 @@ export default function SolutionDetailPage() {
                   padding: '6px 16px',
                   borderRadius: 999
                 }}>
-                  W2W Enterprise Solution
+                  W2W Enterprise Product
                 </span>
 
                 <span style={{
@@ -131,7 +131,7 @@ export default function SolutionDetailPage() {
                     textDecoration: 'none'
                   }}
                 >
-                  ← All Solutions
+                  ← All Products
                 </Link>
               </div>
             </div>
@@ -360,13 +360,13 @@ export default function SolutionDetailPage() {
         </section>
 
 
-        {/* OTHER SOLUTIONS NAVIGATION BAR */}
+        {/* ALL SOLUTIONS NAVIGATION BAR */}
         <div style={{ marginTop: 24 }}>
           <h3 style={{ fontSize: 22, fontWeight: 900, color: '#022c22', marginBottom: 20 }}>
-            Explore Other W2W Solutions
+            Explore All W2W Products
           </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 20 }}>
-            {otherSolutions.map((item) => (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+            {solutionsData.map((item) => (
               <div
                 key={item.id}
                 onClick={() => navigate(`/solutions/${item.id}`)}
